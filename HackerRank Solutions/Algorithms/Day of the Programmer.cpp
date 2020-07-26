@@ -3,19 +3,20 @@ using namespace std;
 
 int main()
 {
-    int y, date;
-    cin >> y;
-    if(y == 1918){
+    int year, date;
+    cin >> year;
+    if(year == 1918){
         date = 26;
     }
+    else if (year <= 1917 && year%4 == 0){
         date = 12;
     }
-    else if (y > 1918 && (y%400 == 0 || y%4 == 0 && y%100 != 0)){
+    else if (year > 1918 && (year%400 == 0 || year%4 == 0 && year%100 != 0)){
         date = 12;
     }
     else{
         date = 13;
     }
-    cout << date << "." << "09" << "." << y << endl;
+    cout << date << "." << "09" << "." << year << endl;
     return 0;
 }
