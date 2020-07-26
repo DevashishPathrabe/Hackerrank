@@ -7,8 +7,7 @@ import java.util.regex.*;
 public class Solution {
     static int solveMeFirst(int a, int b) {
       // Hint: Type return a+b; below
-        int s = a+b;
-        return s;
+        return a + b;
 	}
 
  public static void main(String[] args) {
