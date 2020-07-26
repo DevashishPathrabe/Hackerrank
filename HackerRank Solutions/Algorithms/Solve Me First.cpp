@@ -6,8 +6,7 @@
 using namespace std;
 
 int solveMeFirst(int a, int b) {
-    int s = a+b;
-    return s;
+    return a + b;
 }
 
 int main() {
