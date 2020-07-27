@@ -13,8 +13,9 @@ int main()
     }
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){
-          if (keyboard[i] + usb[j] <= b)
-            amount = max(amount, keyboard[i] + usb[j]);
+            if (keyboard[i] + usb[j] <= b){
+                amount = max(amount, keyboard[i] + usb[j]);
+            }
         }
     }
     cout << amount << endl;
