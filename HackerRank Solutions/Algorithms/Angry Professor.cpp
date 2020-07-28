@@ -2,20 +2,20 @@
 using namespace std;
 
 int main(){
-    int t, arrivalTime;
+    int t, StudentsArrivalTime;
     cin >> t;
     for(int a0=0; a0<t; a0++){
         int n, k;
         cin >> n >> k;
         vector<int>a(n);
-        arrivalTime = 0;
+        StudentsArrivalTime = 0;
         for(int i=0; i<n; i++){
             cin >> a[i];
             if(a[i] <= 0){
-                arrivalTime++;
+                StudentsArrivalTime++;
             }
         }
-        if(arrivalTime >= k){
+        if(StudentsArrivalTime >= k){
             cout << "NO" << endl;
         } else{
             cout << "YES" << endl;
