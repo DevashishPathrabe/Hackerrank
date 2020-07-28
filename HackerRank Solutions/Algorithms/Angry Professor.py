@@ -8,11 +8,11 @@ import sys
 
 # Complete the angryProfessor function below.
 def angryProfessor(k, a):
-    arrivalTime = 0
+    StudentsArrivalTime = 0
     for i in range(len(a)):
         if(a[i] <= 0):
-            arrivalTime += 1
-        if(arrivalTime >= k):
+            StudentsArrivalTime += 1
+        if(StudentsArrivalTime >= k):
             return "NO"
     return "YES"
 if __name__ == '__main__':
