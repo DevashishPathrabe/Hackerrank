@@ -2,15 +2,15 @@
 using namespace std;
 
 int main() {
-    int n, liked, cumulativelikes, shared;
+    int n, liked, cumulativeLikes, shared;
     cin >> n;
     shared = 6;
-    cumulativelikes = 2;
+    cumulativeLikes = 2;
     for(int i=2; i<=n; i++){
         liked = floor(shared/2);
         shared = (liked)*3;
-        cumulativelikes += liked;
+        cumulativeLikes += liked;
     }
-    cout << cumulativelikes << endl;
+    cout << cumulativeLikes << endl;
     return 0;
 }
