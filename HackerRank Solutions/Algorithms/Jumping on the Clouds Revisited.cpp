@@ -15,7 +15,6 @@ int jumpingOnClouds(vector<int> c, int k) {
         e -= 1+c[i]*2;
     }
     return e;
-
 }
 
 int main()
