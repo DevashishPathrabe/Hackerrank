@@ -16,7 +16,6 @@ int findDigits(int n) {
         }
     }
     return divisorOfn;
-
 }
 
 int main()
