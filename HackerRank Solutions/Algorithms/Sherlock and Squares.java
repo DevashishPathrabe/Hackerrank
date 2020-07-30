@@ -20,7 +20,6 @@ public class Solution {
             i++;
         }
         return numberOfSquares;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
