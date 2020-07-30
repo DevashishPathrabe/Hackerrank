@@ -22,7 +22,6 @@ public class Solution {
             }
         }
         return divisorOfn;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
