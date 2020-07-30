@@ -28,7 +28,6 @@ public class Solution {
             }
         }
         return fine;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
