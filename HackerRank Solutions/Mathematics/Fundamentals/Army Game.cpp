@@ -11,7 +11,7 @@ int gameWithCells(int n, int m) {
     /*
      * Write your code here.
      */
-    return (ceil ((double)n/2) * ceil ((double)m/2));
+    return (ceil((double)n/2) * ceil((double)m/2));
 }
 
 int main()
