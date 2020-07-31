@@ -1,13 +1,36 @@
 #include <bits/stdc++.h>
+
 using namespace std;
-int main(){
-    long int t,mod = 1e9 + 7;
-    cin>>t;
-    while(t--){
-        long int n;
+
+/*
+ * Complete the summingSeries function below.
+ */
+int summingSeries(long n) {
+    /*
+     * Write your code here.
+     */
+    return (((n%1000000007)*(n%1000000007))%1000000007);
+}
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    int t;
+    cin >> t;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    for (int t_itr = 0; t_itr < t; t_itr++) {
+        long n;
         cin >> n;
-        n %= mod;
-        cout << (n*n) % (mod) << endl;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+        int result = summingSeries(n);
+
+        fout << result << "\n";
     }
+
+    fout.close();
+
     return 0;
 }
