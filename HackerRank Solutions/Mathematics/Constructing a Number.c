@@ -24,14 +24,14 @@ char** split_string(char*);
 //
 char* canConstruct(int a_count, int* a) {
     // Return "Yes" or "No" denoting whether you can construct the required number.
-    long int i,sum=0;
-    for(i=0;i<a_count;i++){
-        sum=sum+a[i];
+    long int sum = 0;
+    for(int i=0; i<a_count; i++){
+        sum = sum+a[i];
     }
     if(sum%3 == 0){
-        return "Yes";
+        return ("Yes");
     }
-    return "No";
+    return ("No");
 }
 
 int main()
