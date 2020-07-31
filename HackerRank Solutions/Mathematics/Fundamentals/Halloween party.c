@@ -15,7 +15,7 @@ long halloweenParty(long int k) {
     /*
      * Write your code here.
      */
-    return (k-k/2)*(k/2);
+    return ((k-k/2)*(k/2));
 }
 
 int main()
