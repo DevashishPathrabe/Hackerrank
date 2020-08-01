@@ -10,10 +10,10 @@ def closestNumber(a, b, x):
     #
     # Write your code here.
     #
-    leftDiffernce = (math.floor((a**b)/x)*x)
+    leftDifference = (math.floor((a**b)/x)*x)
     rightDifference = (math.ceil((a**b)/x)*x)
-    if((a**b)-leftDiffernce < rightDifference-(a**b)):
-        return (leftDiffernce)
+    if((a**b)-leftDifference < rightDifference-(a**b)):
+        return (leftDifference)
     return (rightDifference)
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
