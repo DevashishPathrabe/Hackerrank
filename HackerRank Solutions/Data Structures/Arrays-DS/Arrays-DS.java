@@ -9,14 +9,8 @@ import java.util.regex.*;
 public class Solution {
 
     // Complete the reverseArray function below.
-    static int[] reverseArray(int[] a) {
-        for(int i=0, j=a.length-1; i<a.length; i++, j--){
-            if(i < j){
-                int temp = a[i];
-                a[i] = a[j];
-                a[j] = temp;
-            }
-        }
+    static Integer[] reverseArray(Integer a[]) {
+        Collections.reverse(Arrays.asList(a));
         return a;
     }
 
@@ -28,7 +22,7 @@ public class Solution {
         int arrCount = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-        int[] arr = new int[arrCount];
+        Integer[] arr = new Integer[arrCount];
 
         String[] arrItems = scanner.nextLine().split(" ");
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
@@ -38,7 +32,7 @@ public class Solution {
             arr[i] = arrItem;
         }
 
-        int[] res = reverseArray(arr);
+        Integer[] res = reverseArray(arr);
 
         for (int i = 0; i < res.length; i++) {
             bufferedWriter.write(String.valueOf(res[i]));
