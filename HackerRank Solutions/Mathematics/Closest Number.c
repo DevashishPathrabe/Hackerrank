@@ -20,9 +20,9 @@ int closestNumber(int a, int b, int x) {
     int value = temp / x;
     int differenceOnLeft = x * value;
     int differenceOnRight = x * (value + 1);
-    if ((temp - differenceOnLeft) < (differenceOnRight - temp)) {
+    if((temp - differenceOnLeft) < (differenceOnRight - temp)){
         return (differenceOnLeft);
-    } else {
+    } else{
         return (differenceOnRight);
     }
 }
