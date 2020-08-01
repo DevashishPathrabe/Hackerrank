@@ -11,15 +11,12 @@ int closestNumber(int a, int b, int x) {
     /*
      * Write your code here.
      */
-    int temp = pow(a,b);
-    int value = temp / x;
-    int differenceOnLeft = x * value;
-    int differenceOnRight = x * (value + 1);
-    if((temp - differenceOnLeft) < (differenceOnRight - temp)){
-        return (differenceOnLeft);
-    } else{
-        return (differenceOnRight);
+    int leftDifference = floor(pow(a,b)/x)*x;
+    int rightDifference = ceil(pow(a,b)/x)*x;
+    if(pow(a,b) - leftDifference < rightDifference - pow(a,b)){
+        return (leftDifference);
     }
+    return (rightDifference);
 }
 
 int main()
