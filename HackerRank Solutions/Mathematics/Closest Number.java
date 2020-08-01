@@ -13,15 +13,12 @@ public class Solution {
         /*
          * Write your code here.
          */
-        int temp = (int)Math.pow(a,b);
-        int value = temp / x;
-        int differenceOnLeft = x * value;
-        int differenceOnRight = x * (value + 1);
-        if((temp - differenceOnLeft) < (differenceOnRight - temp)){
-            return (differenceOnLeft);
-        } else{
-            return (differenceOnRight);
+        int leftDifference = (int)Math.floor(Math.pow(a,b)/x)*x;
+        int rightDifference = (int)Math.ceil(Math.pow(a,b)/x)*x;
+        if(Math.pow(a,b) - leftDifference < rightDifference - Math.pow(a,b)){
+            return (leftDifference);
         }
+        return (rightDifference);
     }
 
     private static final Scanner scanner = new Scanner(System.in);
