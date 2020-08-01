@@ -12,7 +12,7 @@ def closestNumber(a, b, x):
     #
     leftDifference = (math.floor((a**b)/x)*x)
     rightDifference = (math.ceil((a**b)/x)*x)
-    if((a**b)-leftDifference < rightDifference-(a**b)):
+    if((a**b) - leftDifference < rightDifference - (a**b)):
         return (leftDifference)
     return (rightDifference)
 if __name__ == '__main__':
