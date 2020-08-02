@@ -73,7 +73,6 @@ public class Solution {
             }
         }    
         return false;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
