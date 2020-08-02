@@ -81,7 +81,6 @@ public class Solution {
             head = head.prev;
         }
         return head;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
