@@ -81,16 +81,17 @@ void free_doubly_linked_list(DoublyLinkedListNode* node) {
  *
  */
 DoublyLinkedListNode* reverse(DoublyLinkedListNode* head) {
-    DoublyLinkedListNode *temp = NULL;  
-    DoublyLinkedListNode *current = head;
-    while(current !=  NULL){
-       temp = current->prev;
-       current->prev = current->next;
-       current->next = temp;              
-       current = current->prev;
-    }      
-    if(temp != NULL){
-        head = temp->prev;
+    if(head == NULL){
+        return NULL;
+    }
+    while(head != NULL){
+        DoublyLinkedListNode *current = head->prev;
+        head->prev = head->next;
+        head->next = current;
+        if(head->prev == NULL){
+            return head;
+        }
+        head = head->prev;
     }
     return head;
 }
