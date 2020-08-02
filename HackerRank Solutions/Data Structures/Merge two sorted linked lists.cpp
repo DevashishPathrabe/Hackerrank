@@ -82,10 +82,10 @@ SinglyLinkedListNode* mergeLists(SinglyLinkedListNode* head1, SinglyLinkedListNo
         head1->next = mergeLists(head1->next, head2);
     }
     else{
-        SinglyLinkedListNode* temp = head2;
+        SinglyLinkedListNode* current = head2;
         head2 = head2->next;
-        temp->next = head1;
-        head1 = temp;
+        current->next = head1;
+        head1 = current;
         head1->next = mergeLists(head1->next, head2);
     }
     return head1;
