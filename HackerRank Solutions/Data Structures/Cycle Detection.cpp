@@ -78,7 +78,6 @@ bool has_cycle(SinglyLinkedListNode* head) {
         }
     }    
     return false;
-
 }
 
 int main()
