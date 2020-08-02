@@ -73,18 +73,53 @@ void free_doubly_linked_list(DoublyLinkedListNode* node) {
  *
  */
 DoublyLinkedListNode* reverse(DoublyLinkedListNode* head) {
-    DoublyLinkedListNode *temp = NULL;  
-    DoublyLinkedListNode *current = head;
-    while(current !=  NULL){
-       temp = current->prev;
-       current->prev = current->next;
-       current->next = temp;              
-       current = current->prev;
-    }      
-    if(temp != NULL){
-        head = temp->prev;
+    if(head == NULL){
+        return NULL;
+    }
+    while(head != NULL){
+        DoublyLinkedListNode *current = head->prev;
+        head->prev = head->next;
+        head->next = current;
+        if(head->prev == NULL){
+            return head;
+        }
+        head = head->prev;
     }
     return head;
 }
 
 int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    int t;
+    cin >> t;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    for (int t_itr = 0; t_itr < t; t_itr++) {
+        DoublyLinkedList* llist = new DoublyLinkedList();
+
+        int llist_count;
+        cin >> llist_count;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+        for (int i = 0; i < llist_count; i++) {
+            int llist_item;
+            cin >> llist_item;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            llist->insert_node(llist_item);
+        }
+
+        DoublyLinkedListNode* llist1 = reverse(llist->head);
+
+        print_doubly_linked_list(llist1, " ", fout);
+        fout << "\n";
+
+        free_doubly_linked_list(llist1);
+    }
+
+    fout.close();
+
+    return 0;
+}
