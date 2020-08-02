@@ -75,7 +75,7 @@ void free_doubly_linked_list(DoublyLinkedListNode* node) {
 DoublyLinkedListNode* reverse(DoublyLinkedListNode* head) {
     DoublyLinkedListNode *temp = NULL;  
     DoublyLinkedListNode *current = head;
-    while (current !=  NULL){
+    while(current !=  NULL){
        temp = current->prev;
        current->prev = current->next;
        current->next = temp;              
