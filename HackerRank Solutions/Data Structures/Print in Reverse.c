@@ -82,7 +82,6 @@ void reversePrint(SinglyLinkedListNode* head) {
     }
     reversePrint(head->next);
     printf("%d\n", head->data);
-
 }
 
 int main()
