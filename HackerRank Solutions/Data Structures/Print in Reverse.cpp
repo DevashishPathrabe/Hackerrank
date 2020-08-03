@@ -74,7 +74,6 @@ void reversePrint(SinglyLinkedListNode* head) {
     }
     reversePrint(head->next);
     cout << head->data << endl;
-
 }
 
 int main()
