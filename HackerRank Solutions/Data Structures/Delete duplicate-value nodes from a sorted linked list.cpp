@@ -82,7 +82,6 @@ SinglyLinkedListNode* removeDuplicates(SinglyLinkedListNode* head) {
         }
     }
     return head;
-
 }
 
 int main()
