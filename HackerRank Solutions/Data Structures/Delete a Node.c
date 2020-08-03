@@ -82,7 +82,6 @@ SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* head, int position) {
     }
     head->next = deleteNode(head->next, position - 1);
     return head;
-
 }
 
 int main()
