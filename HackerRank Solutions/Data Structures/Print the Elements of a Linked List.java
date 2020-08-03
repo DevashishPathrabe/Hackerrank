@@ -56,7 +56,6 @@ public class Solution {
             System.out.println(head.data);
             head = head.next; 
         }
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
