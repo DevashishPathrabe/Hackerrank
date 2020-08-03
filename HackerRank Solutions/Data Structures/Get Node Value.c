@@ -87,7 +87,6 @@ int getNode(SinglyLinkedListNode* head, int positionFromTail) {
         }
     }
     return result->data;
-
 }
 
 int main()
