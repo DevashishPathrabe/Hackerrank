@@ -68,8 +68,7 @@ void free_singly_linked_list(SinglyLinkedListNode* node) {
  * };
  *
  */
-bool compare_lists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) 
-{
+bool compare_lists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
     if(head1 == NULL && head2 == NULL){
         return 1;
     }
