@@ -69,7 +69,6 @@ public class Solution {
         }
         head.next = deleteNode(head.next, position - 1);
         return head;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
