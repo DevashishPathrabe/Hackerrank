@@ -69,7 +69,6 @@ public class Solution {
         }
         reversePrint(head.next);
         System.out.println(head.data);
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
