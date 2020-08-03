@@ -76,8 +76,7 @@ SinglyLinkedListNode* removeDuplicates(SinglyLinkedListNode* head) {
             current->next = temp->next;
             delete(temp);
         }
-        else
-        {
+        else{
             current = current->next;
         }
     }
