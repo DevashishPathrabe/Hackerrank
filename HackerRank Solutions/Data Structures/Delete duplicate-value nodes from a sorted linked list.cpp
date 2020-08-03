@@ -69,16 +69,16 @@ void free_singly_linked_list(SinglyLinkedListNode* node) {
  *
  */
 SinglyLinkedListNode* removeDuplicates(SinglyLinkedListNode* head) {
-    SinglyLinkedListNode * current=head;
-    while(current->next!=NULL){
-        if(current->data==current->next->data){
-            SinglyLinkedListNode * temp=current->next;
-            current->next=temp->next;
+    SinglyLinkedListNode * current = head;
+    while(current->next != NULL){
+        if(current->data == current->next->data){
+            SinglyLinkedListNode * temp = current->next;
+            current->next = temp->next;
             delete(temp);
         }
         else
         {
-            current=current->next;
+            current = current->next;
         }
     }
     return head;
