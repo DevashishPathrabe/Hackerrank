@@ -15,14 +15,14 @@ class Node {
 
 class Solution {
 
-	/*
+    /*
     class Node 
-    	int data;
-    	Node left;
-    	Node right;
-	*/
-	public static Node lca(Node root, int v1, int v2) {
-      	// Write your code here.
+        int data;
+        Node left;
+        Node right;
+    */
+    public static Node lca(Node root, int v1, int v2) {
+        // Write your code here.
         if(root == null){
             return null;
         }
@@ -35,7 +35,7 @@ class Solution {
         return root;
     }
 
-	public static Node insert(Node root, int data) {
+    public static Node insert(Node root, int data) {
         if(root == null) {
             return new Node(data);
         } else {
@@ -60,9 +60,9 @@ class Solution {
             root = insert(root, data);
         }
         int v1 = scan.nextInt();
-      	int v2 = scan.nextInt();
+        int v2 = scan.nextInt();
         scan.close();
         Node ans = lca(root,v1,v2);
         System.out.println(ans.data);
-    }	
+    }   
 }
