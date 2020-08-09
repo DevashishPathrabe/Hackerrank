@@ -16,7 +16,6 @@ public class Solution {
             maxHeight = Math.max(maxHeight, h[word.charAt(i) - 'a']);
         }
         return maxHeight * width;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
