@@ -10,13 +10,13 @@ public class Solution {
 
     // Complete the designerPdfViewer function below.
     static int designerPdfViewer(int[] h, String word) {
-        char[] ch = word.toCharArray();
-        int height = 0;
-        for(int i=0; i<ch.length; i++) {
-            height = Math.max(height, h[ch[i] - 'a']);
+        int maxHeight = 0;
+        int width = word.length();
+        for (int i = 0; i < width; i++) {
+            maxHeight = Math.max(maxHeight, h[word.charAt(i) - 'a']);
         }
-        int area = height * 1 * ch.length;
-        return(area);
+        return maxHeight * width;
+
     }
 
     private static final Scanner scanner = new Scanner(System.in);
