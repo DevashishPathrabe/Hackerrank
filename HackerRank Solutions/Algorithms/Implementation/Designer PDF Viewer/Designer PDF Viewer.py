@@ -8,11 +8,11 @@ import sys
 
 # Complete the designerPdfViewer function below.
 def designerPdfViewer(h, word):
-    height = 0
-    for i in range(len(word)):
-        height = max(height, h[ord(word[i]) - ord('a')])
-    area = height * 1 * len(word)
-    return(area)
+    maxHeight = 0
+    width = len(word)
+    for c in word:
+        maxHeight = max(maxHeight, h[ord(c) - ord('a')])
+    return maxHeight * width
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
