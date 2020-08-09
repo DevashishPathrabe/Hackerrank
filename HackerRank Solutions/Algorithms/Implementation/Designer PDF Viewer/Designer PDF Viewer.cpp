@@ -6,13 +6,15 @@ vector<string> split_string(string);
 
 // Complete the designerPdfViewer function below.
 int designerPdfViewer(vector<int> h, string word) {
-    int height = 0;
-    for(int i=0; i<word.size(); i++) {
-        height = max(height, h[word[i] - 'a']);
+    int maxHeight = 0;
+    int width = word.size();
+    for (int i = 0; i < width; i++) {
+        maxHeight = max(maxHeight, h[word[i] - 'a']);
     }
-    int area = height * 1 * word.size();
-    return(area);
+    return maxHeight * width;
+
 }
+
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
