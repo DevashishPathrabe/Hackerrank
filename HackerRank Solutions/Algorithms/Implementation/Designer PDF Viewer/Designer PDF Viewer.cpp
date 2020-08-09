@@ -12,7 +12,6 @@ int designerPdfViewer(vector<int> h, string word) {
         maxHeight = max(maxHeight, h[word[i] - 'a']);
     }
     return maxHeight * width;
-
 }
 
 int main()
