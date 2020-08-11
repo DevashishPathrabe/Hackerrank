@@ -11,11 +11,12 @@ public class Solution {
     // Complete the flatlandSpaceStations function below.
     static int flatlandSpaceStations(int n, int[] c) {
         Arrays.sort(c);
-        int distance = Math.max(c[0], n-1- c[c.length-1]);
+        int distance = Math.max(c[0], n-1-c[c.length-1]);
         for(int i=0; i+1<c.length; i++){
             distance = Math.max(distance, (c[i+1] - c[i]) / 2);
         }
         return distance;
+
     }
 
     private static final Scanner scanner = new Scanner(System.in);
