@@ -23,8 +23,8 @@ public class Solution {
                     }
                     break;
                 case 2:
-                    int poppedValue = stack.pop();
-                    if(poppedValue == maxStack.peek()){
+                    int popValue = stack.pop();
+                    if(popValue == maxStack.peek()){
                         maxStack.pop();
                     }
                     break;
