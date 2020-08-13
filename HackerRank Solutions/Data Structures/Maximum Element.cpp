@@ -15,14 +15,16 @@ int main() {
         switch(query){
             case 1:
                 cin >> x;
-                if(stack.empty())
+                if(stack.empty()){
                     stack.push(x);
-                else
+                } else{
                     stack.push(max(x,stack.top()));
+                }
                 break;
             case 2:
-                if(!stack.empty())
+                if(!stack.empty()){
                     stack.pop();
+                }
                 break;
             case 3:
                 cout << stack.top() << endl;
