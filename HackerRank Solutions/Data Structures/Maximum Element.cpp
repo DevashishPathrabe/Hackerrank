@@ -7,27 +7,28 @@
 using namespace std;
 
 int main() {
-    stack <int> s;
-    int N, x, type;
+    stack <int> stack;
+    int N, x, t;
     cin >> N;
     while(N--){
-        cin >> type;
-        if(type == 1){
+        cin >> t;
+        if(t == 1){
             cin >> x;
-            if(s.empty()){
-                s.push(x);
-            } else{
-                s.push(max(x,s.top()));
+            if(stack.empty()){
+                stack.push(x);
+            }
+            else{
+                stack.push(max(x,stack.top()));
             }
         }
-        else if(type == 2){
-            if(!s.empty()){
-                s.pop();
+        else if(t == 2){
+            if (!stack.empty()){
+                stack.pop();
             }
         }
-        else if(type == 3){
-            cout << s.top() << endl;
-        } 
+        else if(t == 3){
+            cout << stack.top() << endl;
+        }
     }
     return 0;
 }
