@@ -8,11 +8,11 @@ using namespace std;
 
 int main() {
     stack <int> stack;
-    int N, x, t;
+    int N, x, query;
     cin >> N;
     while(N--){
-        cin >> t;
-        if(t == 1){
+        cin >> query;
+        if(query == 1){
             cin >> x;
             if(stack.empty()){
                 stack.push(x);
@@ -21,12 +21,12 @@ int main() {
                 stack.push(max(x,stack.top()));
             }
         }
-        else if(t == 2){
+        else if(query == 2){
             if (!stack.empty()){
                 stack.pop();
             }
         }
-        else if(t == 3){
+        else if(query == 3){
             cout << stack.top() << endl;
         }
     }
