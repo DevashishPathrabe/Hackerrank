@@ -10,24 +10,25 @@ int main() {
     stack <int> stack;
     int N, x, query;
     cin >> N;
-    while(N--){
+    while(N--){    
         cin >> query;
-        if(query == 1){
-            cin >> x;
-            if(stack.empty()){
-                stack.push(x);
-            }
-            else{
-                stack.push(max(x,stack.top()));
-            }
-        }
-        else if(query == 2){
-            if (!stack.empty()){
-                stack.pop();
-            }
-        }
-        else if(query == 3){
-            cout << stack.top() << endl;
+        switch(query){
+            case 1:
+                cin >> x;
+                if(stack.empty())
+                    stack.push(x);
+                else
+                    stack.push(max(x,stack.top()));
+                break;
+            case 2:
+                if(!stack.empty())
+                    stack.pop();
+                break;
+            case 3:
+                cout << stack.top() << endl;
+                break;
+            default:
+                break;
         }
     }
     return 0;
