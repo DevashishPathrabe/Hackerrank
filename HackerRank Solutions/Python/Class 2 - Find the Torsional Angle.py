@@ -26,7 +26,7 @@ class Points(object):
 if __name__ == '__main__':
     points = list()
     for i in range(4):
-        a = map(float, raw_input().split())
+        a = list(map(float, input().split()))
         points.append(a)
 
     a, b, c, d = Points(*points[0]), Points(*points[1]), Points(*points[2]), Points(*points[3])
@@ -34,4 +34,4 @@ if __name__ == '__main__':
     y = (c - b).cross(d - c)
     angle = math.acos(x.dot(y) / (x.absolute() * y.absolute()))
 
-    print "%.2f" % math.degrees(angle)
+    print("%.2f" % math.degrees(angle))
