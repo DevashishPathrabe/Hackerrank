@@ -21,7 +21,6 @@ public class Solution {
             }
         }
         return arr;
-
     }
 
     private static final Scanner scanner = new Scanner(System.in);
