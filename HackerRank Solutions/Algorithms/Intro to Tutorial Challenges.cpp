@@ -7,10 +7,8 @@ vector<string> split_string(string);
 // Complete the introTutorial function below.
 int introTutorial(int V, vector<int> arr) {
     int i=0;
-    for(i=0; i<arr.size(); i++){
-        if(arr[i] == V){
-            return i;
-        }
+    while(arr[i] != V){
+        i++;
     }
     return i;
 }
