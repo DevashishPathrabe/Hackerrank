@@ -14,10 +14,8 @@ char** split_string(char*);
 // Complete the introTutorial function below.
 int introTutorial(int V, int arr_count, int* arr) {
     int i=0;
-    for(i=0; i<arr_count; i++){
-        if(arr[i] == V){
-            return i;
-        }
+    while(arr[i] != V){
+        i++;
     }
     return i;
 }
