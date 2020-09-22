@@ -8,10 +8,10 @@ def getMean(list):
 def getMedian(list):
     median = 0.0
     list.sort()
-    if(size % 2 == 0):
-        median = float(list[size//2 - 1] + list[len(list)//2]) / 2
+    if(len(list) % 2 == 0):
+        median = float(list[len(list)//2 - 1] + list[len(list)//2]) / 2
     else:
-        median = list[(size-1)/2]
+        median = list[(len(list)-1)/2]
     return median
 def getMode(list):
     mode = 0
