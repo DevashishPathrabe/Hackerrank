@@ -2,15 +2,17 @@
 using namespace std;
 
 int main() {
-    int n, sum = 0;
+    int n;
     cin >> n;
-    vector<int> arr(n);
-    for(int i=0; i<n; i++){
-        cin >> arr[i];
+    int sum = 0;
+    vector<int> v;
+    for (int i=0; i<n; i++){
+        int temp;
+        cin >> temp;
+        v.push_back(temp);
     }
-    for(int i=0; i<n; i++){
-        sum += arr[i];
+    for (int i=0; i<n; i++){
+        sum += v[i];
     }
     cout << sum << endl;
-    return 0;
 }
