@@ -5,16 +5,20 @@
 #include <algorithm>
 using namespace std;
 
+
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     int N;
     cin >> N;
-    int arr[N];
-    for(int i=0; i<N;i++){
-        cin >> arr[i];
+    vector<int> v;
+    for (int i=0; i<N; i++){
+        int temp;
+        cin >> temp;
+        v.push_back(temp);
     }
-    for(int i=N-1; i>=0; i--){
-        cout << arr[i] << " ";
+    reverse(v.begin(), v.end());
+    for(int i=0; i<N; i++){
+        cout << v[i] << " ";
     }
     return 0;
 }
