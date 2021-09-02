@@ -3,17 +3,18 @@
 using namespace std;
 
 int max_of_four(int a, int b, int c, int d) {
-    int max = a;
-    if(b>max){
-        max = b;
+    if (a > b && a > c && a > d){
+        return a;
     }
-    if(c>max){
-        max = c;
+    else if (b > a && b > c && b > d){
+        return b;
     }
-    if(d>max){
-        max = d;
+    else if (c > a && c > b && c > d){
+        return c;
     }
-    return max;
+    else{
+        return d;
+    }
 }
 int main() {
     int a, b, c, d;
