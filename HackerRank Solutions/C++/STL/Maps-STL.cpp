@@ -10,25 +10,28 @@ using namespace std;
 
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    map<string, int> Map;
+    int q;
+    cin >> q;
+    int type, y;
+    string x;
+    map<string, int> m;
     map<string, int>::iterator it;
-    int Q, Y, type;
-    string X;
-    cin >> Q;
-    for(int i=0; i<Q; i++){
-        cin >> type >> X;
-        if(type == 1){
-            cin >> Y;
-            it = Map.find(X);
-            if(it == Map.end()){
-                Map[X] = Y;
-            } else{
-                Map[X] += Y;
+    for (int i=0; i<q; i++) {
+        cin >> type >> x;
+        if (type == 1) {
+            cin >> y;
+            it = m.find(x);
+            if (it == m.end()) {
+                m[x] = y;
+            } else {
+                m[x] += y;
             }
-        } else if(type == 2){
-            Map[X] = 0;
-        } else if(type == 3){
-            cout << Map[X] << endl;
+        }
+        else if (type == 2) {
+            m[x] = 0;
+        }
+        else if (type == 3) {
+            cout << m[x] << endl;
         }
     }
     return 0;
