@@ -9,27 +9,28 @@ using namespace std;
 
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    set<int> Set;
+    int q;
+    cin >> q;
+    set<int> s;
     set<int>::iterator it;
-    int Q, y, x;
-    scanf("%d", &Q);
-    for(int i=0; i<Q; i++){
+    for (int i=0; i<q; i++) {
+        int y, x;
         cin >> y >> x;
-        if(y == 1){
-            Set.insert(x);
-        } else if(y == 2){
-            Set.erase(x);
-        } else if(y == 3){
-            it = Set.find(x);
-            if(it == Set.end()){
+        if (y == 1) {
+            s.insert(x);
+        }
+        else if (y == 2) {
+            s.erase(x);
+        }
+        else if (y == 3) {
+            it = s.find(x);
+            if (it == s.end()) {
                 cout << "No" << endl;
-            } else{
+            }
+            else {
                 cout << "Yes" << endl;
             }
         }
     }
     return 0;
 }
-
-
-
