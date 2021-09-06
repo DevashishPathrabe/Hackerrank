@@ -8,22 +8,23 @@ using namespace std;
 
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    int n,a,b,c,d,size;
-    cin >> n;
-    vector<int>arr;
-    for(a=0;a<n;a++){
-        int v;
-        cin >> v;
-        arr.push_back(v);
+    int N;
+    cin >> N;
+    vector<int> v;
+    for (int i=0; i<N; i++){
+        int temp;
+        cin >> temp;
+        v.push_back(temp);
     }
-    cin >> b;
-    arr.erase(arr.begin()+b-1);
-    cin >> c >> d;
-    arr.erase(arr.begin()+c-1,arr.begin()+d-1);
-    size=arr.size();
-    cout << size << endl;
-    for(a=0;a<size;a++){
-        cout << arr[a] << " ";
+    int e;
+    cin >> e;
+    v.erase(v.begin()+e-1);
+    int a, b;
+    cin >> a >> b;
+    v.erase(v.begin()+a-1, v.begin()+b-1);
+    cout << v.size() << endl;
+    for (int i=0; i<v.size(); i++) {
+        cout << v[i] << " ";
     }
     return 0;
 }
