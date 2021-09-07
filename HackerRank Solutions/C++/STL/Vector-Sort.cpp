@@ -7,18 +7,18 @@ using namespace std;
 
 
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    vector<int> arr;
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
     int N;
-    scanf("%d", &N);
-    for(int i=0; i<N; i++){
+    cin >> N;
+    vector<int> v;
+    for (int i=0; i<N; i++) {
         int temp;
-        scanf("%d", &temp);
-        arr.push_back(temp);
+        cin >> temp;
+        v.push_back(temp);
     }
-    sort(arr.begin(), arr.end());
-    for(int i=0; i<N; i++){
-        printf("%d ", arr[i]);
+    sort(v.begin(), v.end());
+    for (int i=0; i<N; i++) {
+        cout << v[i] << " ";
     }
     return 0;
 }
