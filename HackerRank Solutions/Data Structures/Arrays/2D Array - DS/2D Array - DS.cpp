@@ -3,17 +3,22 @@ using namespace std;
 
 int main()
 {
-    int a[6][6], arr;
-    for(int i=0; i<6; i++){
-        for(int j=0; j<6; j++){
-            cin >> a[i][j];
+    int arr = 0;
+    vector<vector<int>> v;
+    for (int i=0; i<6; i++){
+        vector<int> tempVec;
+        for (int j=0; j<6; j++){
+            int temp;
+            cin >> temp;
+            tempVec.push_back(temp);
         }
+        v.push_back(tempVec);
     }
     int hourglassSum = -63;
-    for(int i=0; i<4; i++){
-        for(int j=0; j<4; j++){
-            arr = a[i][j]+a[i][j+1]+a[i][j+2]+a[i+1][j+1]+a[i+2][j]+a[i+2][j+1]+a[i+2][j+2];
-            if(arr > hourglassSum){
+    for (int i=0; i<4; i++){
+        for (int j=0; j<4; j++){
+            arr = v[i][j] + v[i][j+1] + v[i][j+2] + v[i+1][j+1] + v[i+2][j] + v[i+2][j+1] + v[i+2][j+2];
+            if (arr > hourglassSum){
                 hourglassSum = arr;
             }
         }
