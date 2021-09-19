@@ -16,7 +16,7 @@ class Node {
 
 class Solution {
     public:
-  		Node* insert(Node* root, int data) {
+        Node* insert(Node* root, int data) {
             if(root == NULL) {
                 return new Node(data);
             } else {
@@ -52,12 +52,31 @@ class Node {
 
 
     void postOrder(Node *root) {
-        if(root == NULL){
+        if (root == NULL){
             return;
         }
         postOrder(root->left);
         postOrder(root->right);
         cout << root->data << " ";
-        }
+    }
 
 }; //End of Solution
+
+int main() {
+  
+    Solution myTree;
+    Node* root = NULL;
+    
+    int t;
+    int data;
+
+    std::cin >> t;
+
+    while(t-- > 0) {
+        std::cin >> data;
+        root = myTree.insert(root, data);
+    }
+  
+    myTree.postOrder(root);
+    return 0;
+}
