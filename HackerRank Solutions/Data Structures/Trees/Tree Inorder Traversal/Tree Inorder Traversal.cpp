@@ -16,7 +16,7 @@ class Node {
 
 class Solution {
     public:
-  		Node* insert(Node* root, int data) {
+        Node* insert(Node* root, int data) {
             if(root == NULL) {
                 return new Node(data);
             } else {
@@ -51,11 +51,11 @@ class Node {
 */
 
     void inOrder(Node *root) {
-        if(root == NULL){
+        if (root == NULL){
             return;
         }
         inOrder(root->left);
-        printf("%d ", root->data);
+        cout << root->data << " ";
         inOrder(root->right);
     }
 
@@ -76,6 +76,6 @@ int main() {
         root = myTree.insert(root, data);
     }
   
-	myTree.inOrder(root);
+    myTree.inOrder(root);
     return 0;
 }
