@@ -10,8 +10,8 @@ public class Solution {
 
     // Complete the introTutorial function below.
     static int introTutorial(int V, int[] arr) {
-        int i=0;
-        while(arr[i] != V){
+        int i = 0;
+        while (arr[i] != V){
             i += 1;
         }
         return i;
