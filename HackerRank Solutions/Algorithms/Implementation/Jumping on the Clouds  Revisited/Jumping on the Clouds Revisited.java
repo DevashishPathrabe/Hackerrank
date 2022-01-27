@@ -14,7 +14,7 @@ public class Solution {
         int e = 100;
         i = (i+k )% c.length;
         e -= 1+c[i]*2;
-        while(i != 0){
+        while (i != 0){
             i = (i+k) % c.length;
             e -= 1+c[i]*2;
         }
