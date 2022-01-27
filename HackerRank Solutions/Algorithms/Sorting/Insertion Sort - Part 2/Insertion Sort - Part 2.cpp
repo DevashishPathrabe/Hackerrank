@@ -6,17 +6,17 @@ vector<string> split_string(string);
 
 // Complete the insertionSort2 function below.
 void insertionSort2(int n, vector<int> arr) {
-    for(int i=1; i<n; i++){
+    for (int i=1; i<n; i++){
         int a = arr[i];
-        for(int j=i; j>=0; j--){
-            if(a < arr[j-1]){
+        for (int j=i; j>=0; j--){
+            if (a < arr[j-1]){
                 arr[j] = arr[j-1];
             } else{
                 arr[j] = a;
                 break;
             }
         }
-        for(int i=0; i<n; i++){
+        for (int i=0; i<n; i++){
             cout << arr[i] << " ";
         }
         cout << endl;
