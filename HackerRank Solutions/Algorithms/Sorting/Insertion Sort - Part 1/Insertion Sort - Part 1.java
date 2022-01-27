@@ -12,7 +12,7 @@ public class Solution {
     static void insertionSort1(int n, int[] arr) {
         n = arr[arr.length-1];
         int i;
-        for(i=arr.length - 2; (i>=0) && (arr[i]>n); i--) {
+        for (i=arr.length - 2; (i>=0) && (arr[i]>n); i--){
             arr[i+1] = arr[i];
             printArray(arr);
         }
@@ -20,7 +20,7 @@ public class Solution {
         printArray(arr);
     }
     static void printArray(int[] arr) {
-        for(int i=0; i<arr.length; ++i){
+        for (int i=0; i<arr.length; ++i){
             System.out.print(arr[i] + " ");
         }
         System.out.println("");
