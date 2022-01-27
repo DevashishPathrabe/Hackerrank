@@ -5,7 +5,7 @@ int main()
 {
     int year, date;
     cin >> year;
-    if(year == 1918){
+    if (year == 1918){
         date = 26;
     }
     else if (year <= 1917 && year%4 == 0){
