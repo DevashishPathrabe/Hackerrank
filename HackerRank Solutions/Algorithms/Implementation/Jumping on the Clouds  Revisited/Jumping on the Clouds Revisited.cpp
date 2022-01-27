@@ -10,7 +10,7 @@ int jumpingOnClouds(vector<int> c, int k) {
     int e = 100;
     i = (i+k )% c.size();
     e -= 1+c[i]*2;
-    while(i != 0){
+    while (i != 0){
         i = (i+k) % c.size();
         e -= 1+c[i]*2;
     }
