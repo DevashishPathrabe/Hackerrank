@@ -9,14 +9,14 @@ int main() {
     long long len = str.length();
     rem = n%len;
     rept = n/len;
-    for(int i=0; i<len; i++){
-        if(str[i] == 'a'){
+    for (int i=0; i<len; i++){
+        if (str[i] == 'a'){
             cnt++;
         }
-        if(str[i] == 'a' && i < rem){
+        if (str[i] == 'a' && i < rem){
             remCnt++;
         }
     }
-    cout << (cnt*rept)+remCnt << endl;
+    cout << (cnt * rept) + remCnt << endl;
     return 0;
 }
