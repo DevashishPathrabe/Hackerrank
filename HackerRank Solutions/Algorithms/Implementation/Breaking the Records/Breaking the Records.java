@@ -13,12 +13,12 @@ public class Solution {
         int highest, lowest;
         highest = lowest = scores[0];
         int[] result = new int[2];
-        for(int i=1; i<scores.length; i++){
-            if(scores[i] > highest){
+        for (int i=1; i<scores.length; i++){
+            if (scores[i] > highest){
                 highest = scores[i];
                 ++result[0];
             }
-            else if(scores[i] < lowest){
+            else if (scores[i] < lowest){
                 lowest = scores[i];
                 ++result[1];
             }
