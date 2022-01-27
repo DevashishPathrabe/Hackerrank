@@ -12,10 +12,10 @@ public class Solution {
     static String catAndMouse(int x, int y, int z) {
         int differencezx = Math.abs(z-x);
         int differencezy = Math.abs(z-y);
-        if(differencezx > differencezy){
+        if (differencezx > differencezy){
             return("Cat B");
         }
-        if(differencezx < differencezy){
+        if (differencezx < differencezy){
             return("Cat A");
         } else{
             return("Mouse C");
