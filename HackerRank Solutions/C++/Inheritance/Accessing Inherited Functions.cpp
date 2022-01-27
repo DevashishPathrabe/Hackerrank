@@ -5,12 +5,12 @@ using namespace std;
 class A
 {
     public:
-        A(){
+        A() {
             callA = 0;
         }
     private:
         int callA;
-        void inc(){
+        void inc() {
             callA++;
         }
 
@@ -29,12 +29,12 @@ class A
 class B
 {
     public:
-        B(){
+        B() {
             callB = 0;
         }
     private:
         int callB;
-        void inc(){
+        void inc() {
             callB++;
         }
     protected:
@@ -44,7 +44,7 @@ class B
             inc();
         }
     public:
-        int getB(){
+        int getB() {
             return callB;
         }
 };
@@ -52,12 +52,12 @@ class B
 class C
 {
     public:
-        C(){
+        C() {
             callC = 0;
         }
     private:
         int callC;
-        void inc(){
+        void inc() {
             callC++;
         }
     protected:
@@ -67,7 +67,7 @@ class C
             inc();
         }
     public:
-        int getC(){
+        int getC() {
             return callC;
         }
 };
