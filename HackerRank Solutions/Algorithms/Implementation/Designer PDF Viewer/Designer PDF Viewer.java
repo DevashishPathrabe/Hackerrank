@@ -12,7 +12,7 @@ public class Solution {
     static int designerPdfViewer(int[] h, String word) {
         int maxHeight = 0;
         int width = word.length();
-        for (int i = 0; i < width; i++) {
+        for (int i=0; i<width; i++){
             maxHeight = Math.max(maxHeight, h[word.charAt(i) - 'a']);
         }
         return maxHeight * width;
