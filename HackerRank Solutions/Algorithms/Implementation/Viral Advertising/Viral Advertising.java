@@ -11,9 +11,9 @@ public class Solution {
     // Complete the viralAdvertising function below.
     static int viralAdvertising(int n) {
         int shared=6,liked,cumulativeLikes=2;
-        for(int i=2; i<=n; i++){
-            liked = (shared/2);
-            shared = liked*3;
+        for (int i=2; i<=n; i++){
+            liked = (shared / 2);
+            shared = liked * 3;
             cumulativeLikes += liked;
         }
         return cumulativeLikes;
