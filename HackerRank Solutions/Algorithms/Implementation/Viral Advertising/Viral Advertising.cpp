@@ -6,9 +6,9 @@ int main() {
     cin >> n;
     shared = 6;
     cumulativeLikes = 2;
-    for(int i=2; i<=n; i++){
-        liked = floor(shared/2);
-        shared = (liked)*3;
+    for (int i=2; i<=n; i++){
+        liked = floor(shared / 2);
+        shared = (liked) * 3;
         cumulativeLikes += liked;
     }
     cout << cumulativeLikes << endl;
