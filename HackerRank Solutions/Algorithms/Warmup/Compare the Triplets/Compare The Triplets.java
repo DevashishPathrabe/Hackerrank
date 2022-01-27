@@ -12,10 +12,11 @@ public class Solution {
     static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
         int aWin = 0, bWin = 0;
         List<Integer> win = new LinkedList<Integer>();
-        for(int i=0;i<a.size();i++){
-            if(a.get(i) > b.get(i)){
+        for (int i=0; i<a.size(); i++){
+            if (a.get(i) > b.get(i)){
                 ++aWin;
-            } else if(a.get(i) < b.get(i)){
+            }
+            else if (a.get(i) < b.get(i)){
                 ++bWin;
             }
         }
