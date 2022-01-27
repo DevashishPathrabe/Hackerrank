@@ -3,7 +3,7 @@ using namespace std;
 
 int getReverseNumber(int x) {
     int temp = x, y = 0;
-    while(temp != 0){
+    while (temp != 0){
         y = (10*y) + (temp%10);
         temp = temp / 10;
     }
@@ -12,9 +12,9 @@ int getReverseNumber(int x) {
 
 int getBeautifulDays(int i, int j, int k) {
     int beautifulDays = 0;
-    for(int x=i; x<=j; x++){
+    for (int x=i; x<=j; x++){
         int y = getReverseNumber(x);
-        if(abs(x-y) % k == 0){
+        if (abs(x-y) % k == 0){
             beautifulDays++;
         }
     }
