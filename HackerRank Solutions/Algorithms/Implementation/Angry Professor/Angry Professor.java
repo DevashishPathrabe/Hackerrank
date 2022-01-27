@@ -11,8 +11,8 @@ public class Solution {
     // Complete the angryProfessor function below.
     static String angryProfessor(int k, int[] a) {
         int StudentsArrivalTime = 0;
-        for(int i=0; i<a.length; i++){
-            if(a[i] <= 0){
+        for (int i=0; i<a.length; i++){
+            if (a[i] <= 0){
                 StudentsArrivalTime++;
             }
             if (StudentsArrivalTime >= k){
