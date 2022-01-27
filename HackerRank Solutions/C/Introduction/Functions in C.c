@@ -3,16 +3,16 @@
 Add `int max_of_four(int a, int b, int c, int d)` here.
 */
 int max_of_four(int a,int b,int c, int d){ 
-    if(a > b){
-        if(a > c){
-            if(a>d){
+    if (a > b){
+        if (a > c){
+            if (a>d){
                 return a;
             } else{
                 return d;
             }
         }
         else{
-            if(c > d){
+            if (c > d){
                 return c;
             }
             else{
@@ -21,8 +21,8 @@ int max_of_four(int a,int b,int c, int d){
         }
     }
     else{
-        if(b > c){
-            if(b > d){
+        if (b > c){
+            if (b > d){
                 return b;
             }
             else{
@@ -30,7 +30,7 @@ int max_of_four(int a,int b,int c, int d){
             }
         }
         else{
-            if(c > d){
+            if (c > d){
                 return c;
             }
             else{
