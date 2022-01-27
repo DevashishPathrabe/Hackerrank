@@ -11,7 +11,7 @@ public class Solution {
     // Complete the aVeryBigSum function below.
     static long sum = 0;
     static long aVeryBigSum(long[] ar) {
-        for(int i=0; i<ar.length; i++){
+        for (int i=0; i<ar.length; i++){
             sum += ar[i];
         }
         return sum;
