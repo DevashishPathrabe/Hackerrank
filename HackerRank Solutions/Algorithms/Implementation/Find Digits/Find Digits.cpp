@@ -5,13 +5,13 @@ using namespace std;
 int findDigits(int n) {
     int divisorOfn = 0;
     int t = n;
-    while(n > 0){
+    while (n > 0){
         int digit = n % 10;
         n = n/10;
-        if(digit == 0){
+        if (digit == 0){
             continue;
         }
-        else if(t % digit == 0){
+        else if (t % digit == 0){
             divisorOfn++;
         }
     }
