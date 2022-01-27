@@ -9,7 +9,7 @@ int  sum (int count,...) {
     va_list arr;
     int sum = 0;
     va_start(arr, count);
-    while(count--){
+    while (count--){
         sum += va_arg(arr, int);
     }
     return sum;
@@ -19,8 +19,8 @@ int min(int count,...) {
     va_list arr;
     int min = MIN_ELEMENT;
     va_start(arr, count);
-    while(count--){
-        if(min > va_arg(arr, int))
+    while (count--){
+        if (min > va_arg(arr, int))
             min = va_arg(arr, int);
     }
     return min;
@@ -30,8 +30,8 @@ int max(int count,...) {
     va_list arr;
     int max = MAX_ELEMENT;
     va_start(arr, count);
-    while(count--){
-        if(max < va_arg(arr, int))
+    while (count--){
+        if (max < va_arg(arr, int))
             max = va_arg(arr, int);
     }
     return max;
