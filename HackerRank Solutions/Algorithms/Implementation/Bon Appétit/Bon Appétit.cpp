@@ -5,7 +5,7 @@ int main()
 {
     int n, k, bActual=0, bCharged, bill;
     cin >> n >> k;
-    for (int i=0; i<n; i++) {
+    for (int i=0; i<n; i++){
         cin >> bill;
         if (i != k){
             bActual += bill;
