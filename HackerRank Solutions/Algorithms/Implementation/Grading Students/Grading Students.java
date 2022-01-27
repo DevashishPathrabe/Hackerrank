@@ -9,9 +9,9 @@ import java.util.regex.*;
 public class Solution {
 
     public static int getRoundedGrade(int grade) {
-        if(grade >= 38){
+        if (grade >= 38){
             int mod = grade%5;
-            if(mod > 2){
+            if (mod > 2){
                 grade += 5-mod;
             }
         }
