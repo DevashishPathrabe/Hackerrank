@@ -12,15 +12,15 @@ public class Solution {
     static int[] permutationEquation(int[] p) {
         int n = 0;
         int y[] = new int[p.length];
-        for(int i=1; i<=p.length; i++){
-            for(int j=0; j<p.length; j++){
-                if(p[j] == i){
+        for (int i=1; i<=p.length; i++){
+            for (int j=0; j<p.length; j++){
+                if (p[j] == i){
                     n = j+1;
                     break;
                 }
             }
-            for(int j=0; j<p.length; j++){
-                if(p[j] == n){
+            for (int j=0; j<p.length; j++){
+                if (p[j] == n){
                     n = j+1;
                     break;
                 }
