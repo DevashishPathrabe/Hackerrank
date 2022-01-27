@@ -12,10 +12,10 @@ public class Solution {
     static int squares(int a, int b) {
         int numberOfSquares = 0;
         int i = 1;
-        while(i*i < a){ 
+        while (i*i < a){ 
             i++;
         }
-        while(i*i <= b){
+        while (i*i <= b){
             numberOfSquares++;
             i++;
         }
