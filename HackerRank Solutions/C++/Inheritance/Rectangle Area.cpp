@@ -12,11 +12,11 @@ class Rectangle
     public:
     void read_input()
     {
-        cin>>width>>height;
+        cin >> width >> height;
     }
      void display()
     {
-    cout<<width<<" "<<height<<"\n";
+    cout << width << " " << height << "\n";
     } 
 };
 class RectangleArea :public Rectangle
@@ -24,7 +24,7 @@ class RectangleArea :public Rectangle
     public:
       void display()
     {
-      cout<<width * height;
+      cout << width * height;
     }
 };
 
