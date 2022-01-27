@@ -7,13 +7,13 @@ int main() {
     int specialProblems = 0;
     int page = 1;
     int arr[n];
-    for(int chapter=1; chapter<=n; ++chapter){
+    for (int chapter=1; chapter<=n; ++chapter){
         cin >> arr[chapter];
-        for(int index=1; index<=arr[chapter]; ++index){
-            if(index == page){
+        for (int index=1; index<=arr[chapter]; ++index){
+            if (index == page){
                 specialProblems++;
             }
-            if(index == arr[chapter]|| index % k == 0){
+            if (index == arr[chapter] || index % k == 0){
                 ++page;
             }
         }
