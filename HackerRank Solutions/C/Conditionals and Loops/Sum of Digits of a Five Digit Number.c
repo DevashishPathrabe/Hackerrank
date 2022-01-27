@@ -7,7 +7,7 @@ int main() {
     int n;
     int sum = 0;
     scanf("%d", &n);
-    while(n){
+    while (n){
         sum += n % 10;
         n /= 10;
     }
