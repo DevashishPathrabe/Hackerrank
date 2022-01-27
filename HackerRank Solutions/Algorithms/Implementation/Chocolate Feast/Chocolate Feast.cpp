@@ -7,7 +7,7 @@ vector<string> split_string(string);
 int chocolateFeast(int n, int c, int m) {
     int wrappers = n/c;
     int numberOfChocolates = wrappers;
-    while(wrappers >= m){
+    while (wrappers >= m){
         numberOfChocolates += wrappers/m;
         wrappers = wrappers/m + wrappers%m;
     }
