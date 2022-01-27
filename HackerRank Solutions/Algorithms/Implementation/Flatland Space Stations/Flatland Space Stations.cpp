@@ -8,7 +8,7 @@ vector<string> split_string(string);
 int flatlandSpaceStations(int n, int m, vector<int> c) {
     sort(c.begin(),c.end());
     int distance = max(c[0], n-1-c[c.size()-1]);
-    for(int i=0; i+1<c.size(); i++){
+    for (int i=0; i+1<c.size(); i++){
         distance = max(distance, (c[i+1] - c[i]) / 2);
     }
     return distance;
