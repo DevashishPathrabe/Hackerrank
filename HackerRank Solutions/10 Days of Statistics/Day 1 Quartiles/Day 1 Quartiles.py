@@ -5,7 +5,7 @@ n = int(input())
 Q2 = [int(x) for x in input().split()]
 Q2.sort()
 t = int(len(Q2)/2)
-if(len(Q2)%2 == 0):
+if (len(Q2)%2 == 0):
     Q1 = Q2[:t]
     Q3 = Q2[t:]
 else:
