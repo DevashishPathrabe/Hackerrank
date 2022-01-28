@@ -13,13 +13,13 @@ int main() {
     cin >> n;
     int arr[n];
     double sum = 0;
-    for(int i=0; i<n; i++){
+    for (int i=0; i<n; i++){
         cin >> arr[i];
         sum += arr[i];
     }
     double mean = sum / n;
     double totalSum = 0;
-    for(int i=0; i<n; i++){
+    for (int i=0; i<n; i++){
         totalSum += pow(arr[i] - mean, 2);
     }
     cout << fixed << setprecision(1) << sqrt(totalSum / n) << endl;
