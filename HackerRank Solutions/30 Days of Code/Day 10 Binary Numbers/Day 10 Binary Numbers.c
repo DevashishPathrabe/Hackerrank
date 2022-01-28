@@ -16,13 +16,13 @@ int main()
 {
     int n, count=0, max=0;;
     scanf("%d", &n);
-    while(n){
-        if(n%2 == 1){
+    while (n){
+        if (n%2 == 1){
             count++;
         } else{
             count = 0;
         }
-        if(max < count){
+        if (max < count){
             max = count;
         }
         n >>= 1;
