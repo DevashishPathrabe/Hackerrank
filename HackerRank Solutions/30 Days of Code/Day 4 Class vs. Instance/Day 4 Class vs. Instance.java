@@ -16,10 +16,10 @@ public class Person {
 
 	public void amIOld() {
   		// Write code determining if this person's age is old and print the correct statement:
-        if(age < 13){
+        if (age < 13){
             System.out.println("You are young.");
         }
-        else if(age < 18){
+        else if (age < 18){
             System.out.println("You are a teenager.");
         } else{
             System.out.println("You are old.");
