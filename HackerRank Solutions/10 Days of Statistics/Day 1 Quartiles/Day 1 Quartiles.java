@@ -8,13 +8,13 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         int [] x = new int[n];
-        for(int i=0; i<n; i++){
+        for (int i=0; i<n; i++){
             x[i] = scan.nextInt();
         }
         Arrays.sort(x);
         System.out.println(getMedian(x, 0, n/2 - 1));
         System.out.println(getMedian(x, 0, n-1));
-        if(n%2 == 0){
+        if (n%2 == 0){
             System.out.println(getMedian(x, n/2, n-1));
         } else{
             System.out.println(getMedian(x, n/2 + 1, n-1));
