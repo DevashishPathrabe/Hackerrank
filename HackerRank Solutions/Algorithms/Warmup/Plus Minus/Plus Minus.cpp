@@ -5,15 +5,15 @@ int main(){
     int n, positive=0, negative=0, zero=0;
     cin >> n;
     int arr[n];
-    for(int i=0; i<n; i++){
+    for (int i=0; i<n; i++){
         cin >> arr[i];
-        if(arr[i] > 0){
+        if (arr[i] > 0){
             positive++;
         }
-        if(arr[i] < 0){
+        if (arr[i] < 0){
             negative++;
         }        
-        if(arr[i] == 0){
+        if (arr[i] == 0){
             zero++;           
         }
     }
