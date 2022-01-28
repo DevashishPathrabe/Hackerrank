@@ -19,7 +19,7 @@ int main()
     int n = strtol(n_str, &n_endptr, 10);
 
     if (n_endptr == n_str || *n_endptr != '\0') { exit(EXIT_FAILURE); }
-    for(int i=1; i<11; i++){
+    for (int i=1; i<11; i++){
         printf("%i x %i = %i\n", n, i, n*i);
     }
     return 0;
