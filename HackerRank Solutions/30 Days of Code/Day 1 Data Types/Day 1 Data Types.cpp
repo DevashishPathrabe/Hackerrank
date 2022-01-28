@@ -21,9 +21,9 @@ int main() {
     cin.get();
     getline(cin, s1);
     // Print the sum of both integer variables on a new line.
-    cout << i+i1 << endl;
+    cout << i + i1 << endl;
     // Print the sum of the double variables on a new line.
-    d = d+d1;
+    d = d + d1;
     cout << std::fixed << std::setprecision(1) << d << endl;
     // Concatenate and print the String variables on a new line
     // The 's' variable above should be printed first.
