@@ -19,16 +19,16 @@ int main()
     int N = strtol(N_str, &N_endptr, 10);
 
     if (N_endptr == N_str || *N_endptr != '\0') { exit(EXIT_FAILURE); }
-    if(N%2 == 1){
+    if (N%2 == 1){
         printf("Weird");
     }
-    if(N%2 == 0 && 2 <= N && N <= 5){
+    if (N%2 == 0 && 2 <= N && N <= 5){
         printf("Not Weird");
     }
-    if(N%2 == 0 && 6 <= N && N <= 20){
+    if (N%2 == 0 && 6 <= N && N <= 20){
         printf("Weird");
     }
-    if(N%2 == 0 && N > 20){
+    if (N%2 == 0 && N > 20){
         printf("Not Weird");
     }
     return 0;
