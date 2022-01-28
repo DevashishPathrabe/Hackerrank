@@ -8,7 +8,7 @@ using namespace std;
 int getMedian(vector<int> a, int start, int end) {
     int median = 0;
     int size = end - start + 1;
-    if(size%2 == 0){
+    if (size%2 == 0){
         median = (a[start + size/2 - 1] + a[start + size/2]) / 2;
     } else{
         median = a[start + (size - 1)/2];
