@@ -8,17 +8,17 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         int T = scan.nextInt();
         scan.nextLine();
-        for(int i=0; i<T; i++){
+        for (int i=0; i<T; i++){
             String string = scan.nextLine();
             char[] charArray = string.toCharArray();
-            for(int j=0; j<charArray.length; j++){
-                if(j % 2 == 0){
+            for (int j=0; j<charArray.length; j++){
+                if (j % 2 == 0){
                     System.out.print(charArray[j]);
                 }
             }
             System.out.print(" ");
-            for(int j=0; j<charArray.length; j++){
-                if(j % 2 != 0){
+            for (int j=0; j<charArray.length; j++){
+                if (j % 2 != 0){
                     System.out.print(charArray[j]);
                 }
             }
