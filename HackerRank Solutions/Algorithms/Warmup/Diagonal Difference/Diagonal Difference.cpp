@@ -5,8 +5,8 @@ int main(){
     int n, d1=0, d2=0;
     cin >> n;
     int arr[n];
-    for(int i=0;i<n;i++){ 
-        for(int j=0;j<n;j++){
+    for (int i=0; i<n; i++){ 
+        for (int j=0; j<n; j++){
             cin >> arr[j];
         }
         d1 += arr[i];
