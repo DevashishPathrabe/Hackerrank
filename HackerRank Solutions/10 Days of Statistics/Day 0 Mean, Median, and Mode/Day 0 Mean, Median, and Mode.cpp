@@ -7,10 +7,10 @@ using namespace std;
 
 double getMean(const vector<int> &array){
     int sum = 0;
-    for(int i=0; i<array.size(); ++i){
+    for (int i=0; i<array.size(); ++i){
         sum += array[i];
     }
-    double mean = (double)(sum)/array.size();
+    double mean = (double)(sum) / array.size();
     return mean;
 }
 double getMedian(const vector<int> &array){
