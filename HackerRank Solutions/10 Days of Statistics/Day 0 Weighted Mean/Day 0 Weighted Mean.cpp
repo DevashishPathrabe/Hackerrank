@@ -13,15 +13,15 @@ int main() {
     cin >> n;
     vector<int> a(n);
     vector<int> w(n);
-    for(int i=0; i<n; i++){
+    for (int i=0; i<n; i++){
         cin >> a[i];
     }
-    for(int i=0; i<n; i++){
+    for (int i=0; i<n; i++){
         cin >> w[i];
     }
     double sum = 0;
     double cnt = 0;
-    for(int i=0; i<n; i++){
+    for (int i=0; i<n; i++){
         sum += a[i]*w[i];
         cnt += w[i];
     }
