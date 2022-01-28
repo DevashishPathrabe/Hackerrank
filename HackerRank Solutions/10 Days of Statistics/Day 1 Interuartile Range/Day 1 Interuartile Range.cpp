@@ -8,7 +8,7 @@ using namespace std;
 double quad(vector<int> a){ 
     double q; 
     int n = a.size(); 
-    if(n%2 == 0){
+    if (n%2 == 0){
         q = (double)(a[n/2-1] + a[n/2])/2; 
     } else{
         q = (double)a[n/2];
