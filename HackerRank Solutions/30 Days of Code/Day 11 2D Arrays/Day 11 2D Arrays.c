@@ -17,12 +17,12 @@ int main()
 {
     int** arr = malloc(6 * sizeof(int*));
 
-    for (int i = 0; i < 6; i++) {
+    for (int i=0; i<6; i++){
         *(arr + i) = malloc(6 * (sizeof(int)));
 
         char** arr_item_temp = split_string(readline());
 
-        for (int j = 0; j < 6; j++) {
+        for (int j=0; j<6; j++){
             char* arr_item_endptr;
             char* arr_item_str = *(arr_item_temp + j);
             int arr_item = strtol(arr_item_str, &arr_item_endptr, 10);
@@ -33,10 +33,10 @@ int main()
         }
     }
     int sum=0, maxSum=-99999;
-    for(int i=1; i<5; i++){
-        for(int j=1; j<5; j++){
+    for (int i=1; i<5; i++){
+        for (int j=1; j<5; j++){
             sum = arr[i][j] + arr[i-1][j] + arr[i-1][j-1] + arr[i-1][j+1] + arr[i+1][j] + arr[i+1][j-1] + arr[i+1][j+1];
-            if(maxSum < sum){
+            if (maxSum < sum){
                 maxSum = sum;
             }
         }
