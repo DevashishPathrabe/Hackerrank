@@ -8,7 +8,7 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         int size = scan.nextInt();
         int [] a = new int[size]; 
-        for(int i=0; i<size; i++){
+        for (int i=0; i<size; i++){
             a[i] = scan.nextInt();
         }
         System.out.println(getMean(a));
@@ -18,17 +18,17 @@ public class Solution {
     public static double getMean(int[] a){
         double mean = 0;
         int sum = 0;
-        for(int i : a){
+        for (int i : a){
             sum += i;
         }
-        mean = (double)sum/a.length;
+        mean = (double)sum / a.length;
         return mean;
     }
     private static double getMedian(int[] a){
         double median = 0;
         int [] copy = a.clone();
         Arrays.sort(copy);
-        if(a.length % 2 == 0){
+        if (a.length % 2 == 0){
             median = (double)(copy[a.length/2 - 1] + copy[a.length/2]) / 2;
         }else {
             median = (double)copy[(a.length-1)/2];
@@ -41,14 +41,14 @@ public class Solution {
         Arrays.sort(copy);
         int count = 0, max = 0;
         int current = copy[0];
-        for(int i=0; i<a.length; i++){
-            if(copy[i] == current){
+        for (int i=0; i<a.length; i++){
+            if (copy[i] == current){
                 count++;
             } else{
                 count = 1;
                 current = copy[i];
             }
-            if(count > max){
+            if (count > max){
                 max = count;
                 mode = copy[i];
             }
