@@ -3,5 +3,5 @@ from math import sqrt
 
 n = int(input())
 x = sorted(list(map(int, input().split())))
-u = sum(x)/n
+u = sum(x) / n
 print(sqrt(sum([(x[i]-u)**2 for i in range(n)])/n))
