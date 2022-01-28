@@ -7,7 +7,7 @@ int main() {
     string output = time.substr(0, 8);
     string ampm = time.substr(time.size() - 2);
     string hourString = time.substr(0, 2);
-    if(ampm == "PM" && hourString != "12"){
+    if (ampm == "PM" && hourString != "12"){
         int hour = stoi(hourString);
         hour = (hour + 12) % 24;
         stringstream ss;
