@@ -7,4 +7,4 @@ def fact(x, y=0):
 for _ in range(int(input())):
     n = int(input())
     k = int(input())
-    print((fact(k+n-1, n-1) // fact(k))%10**9)
+    print((fact(k+n-1, n-1) // fact(k)) % 10**9)
