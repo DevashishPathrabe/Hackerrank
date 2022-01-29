@@ -17,7 +17,7 @@ if __name__ == '__main__':
         firstName = firstNameEmailID[0]
 
         emailID = firstNameEmailID[1]
-        if(re.search(".+@gmail\.com$", emailID)):
+        if (re.search(".+@gmail\.com$", emailID)):
             arr.append(firstName)
     arr.sort()
     for name in arr:
