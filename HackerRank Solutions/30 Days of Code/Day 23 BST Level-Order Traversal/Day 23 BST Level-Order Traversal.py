@@ -1,27 +1,27 @@
 import sys
 
 class Node:
-    def __init__(self,data):
-        self.right=self.left=None
+    def __init__(self, data):
+        self.right = self.left=None
         self.data = data
 class Solution:
-    def insert(self,root,data):
-        if root==None:
+    def insert(self, root, data):
+        if root == None:
             return Node(data)
         else:
-            if data<=root.data:
-                cur=self.insert(root.left,data)
-                root.left=cur
+            if data <= root.data:
+                cur = self.insert(root.left, data)
+                root.left = cur
             else:
-                cur=self.insert(root.right,data)
-                root.right=cur
+                cur = self.insert(root.right, data)
+                root.right = cur
         return root
 
     def levelOrder(self,root):
         #Write your code here
         queue = [root]
         for curr in queue:    
-            if(curr):
+            if (curr):
                 print(curr.data, end=' ')
                 queue.append(curr.left)
                 queue.append(curr.right) 
