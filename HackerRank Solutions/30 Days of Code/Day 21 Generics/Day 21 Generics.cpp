@@ -12,12 +12,12 @@ using namespace std;
 
 // Write your code here
 template <class T> void printArray(vector<T> i){ 
-    for(int j=0; j<i.size(); j++){
+    for (int j=0; j<i.size(); j++){
         cout << i[j] << endl;
     }
 } 
 void printArray(vector<int> a){
-    for(int i:a){
+    for (int i:a){
         cout << i << endl;
     }
 }
