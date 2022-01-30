@@ -15,13 +15,13 @@ int main() {
     cin >> n;
     cin.ignore();
     map <string,long> phoneBook;
-    for(int i=0; i<n; i++){
+    for (int i=0; i<n; i++){
         cin >> name;
         cin >> phoneNumber;
         phoneBook[name] = phoneNumber;
     }
-    while(cin >> name){
-        if(phoneBook.find(name) != phoneBook.end()){
+    while (cin >> name){
+        if (phoneBook.find(name) != phoneBook.end()){
             cout << name << "=" << phoneBook.find(name)->second << endl;
         } else{
             cout << "Not found" << endl;
