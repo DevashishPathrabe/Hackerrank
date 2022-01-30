@@ -9,7 +9,7 @@ for i in range(0, n):
     try:
         name = input()
         if name in phoneBook:
-            print(f"{name}={phoneBook[name]}")
+            print(f"{name} = {phoneBook[name]}")
         else:
             print("Not found")
     except:
