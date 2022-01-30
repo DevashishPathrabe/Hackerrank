@@ -16,7 +16,7 @@ class Person{
 			this->id = identification;
 		}
 		void printPerson(){
-			cout<< "Name: "<< lastName << ", "<< firstName <<"\nID: "<< id << "\n"; 
+			cout<< "Name: " << lastName << ", " << firstName << "\nID: " << id << "\n"; 
 		}
 	
 };
