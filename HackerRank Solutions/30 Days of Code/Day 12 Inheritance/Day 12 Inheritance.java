@@ -15,8 +15,7 @@ class Person {
 	// Print person data
 	public void printPerson(){
 		 System.out.println(
-				"Name: " + lastName + ", " + firstName 
-			+ 	"\nID: " + idNumber); 
+				"Name: " + lastName + ", " + firstName + "\nID: " + idNumber); 
 	}
 	 
 }
