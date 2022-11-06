@@ -2,9 +2,18 @@
 
 using namespace std;
 
-vector<string> split_string(string);
+string ltrim(const string &);
+string rtrim(const string &);
+vector<string> split(const string &);
 
-// Complete the insertionSort2 function below.
+/*
+ * Complete the 'insertionSort2' function below.
+ *
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER_ARRAY arr
+ */
+
 void insertionSort2(int n, vector<int> arr) {
     for (int i=1; i<n; i++){
         int a = arr[i];
@@ -25,14 +34,15 @@ void insertionSort2(int n, vector<int> arr) {
 
 int main()
 {
-    int n;
-    cin >> n;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
 
     string arr_temp_temp;
     getline(cin, arr_temp_temp);
 
-    vector<string> arr_temp = split_string(arr_temp_temp);
+    vector<string> arr_temp = split(rtrim(arr_temp_temp));
 
     vector<int> arr(n);
 
@@ -47,31 +57,41 @@ int main()
     return 0;
 }
 
-vector<string> split_string(string input_string) {
-    string::iterator new_end = unique(input_string.begin(), input_string.end(), [] (const char &x, const char &y) {
-        return x == y and x == ' ';
-    });
+string ltrim(const string &str) {
+    string s(str);
 
-    input_string.erase(new_end, input_string.end());
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+    );
 
-    while (input_string[input_string.length() - 1] == ' ') {
-        input_string.pop_back();
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
+}
+
+vector<string> split(const string &str) {
+    vector<string> tokens;
+
+    string::size_type start = 0;
+    string::size_type end = 0;
+
+    while ((end = str.find(" ", start)) != string::npos) {
+        tokens.push_back(str.substr(start, end - start));
+
+        start = end + 1;
     }
 
-    vector<string> splits;
-    char delimiter = ' ';
+    tokens.push_back(str.substr(start));
 
-    size_t i = 0;
-    size_t pos = input_string.find(delimiter);
-
-    while (pos != string::npos) {
-        splits.push_back(input_string.substr(i, pos - i));
-
-        i = pos + 1;
-        pos = input_string.find(delimiter, i);
-    }
-
-    splits.push_back(input_string.substr(i, min(pos, input_string.length()) - i + 1));
-
-    return splits;
+    return tokens;
 }
